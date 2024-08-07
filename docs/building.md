@@ -52,6 +52,8 @@ systemd 系统上，往 `/etc/binfmt.d` 安装相应的配置文件。由于模�
 Docker 容器内，因此需要使用静态链接的 QEMU linux-user 模拟器，并且您需要确保
 binfmt\_misc 配置中使用了 `F` (freeze) flag 以保证从未经修改的目标架构 sysroot 中也能访问到模拟器程序。
 
+PS：构建需要镜像 ghcr.io/ruyisdk/ruyi-python-dist，此镜像暂时不是 public 状态，无法拉取，所以基于 docker 的构建方式暂时不可用。
+
 ## Linux 环境下非基于 Docker 的构建
 
 对于没有条件运行 Docker，或者官方未提供适用的构建容器镜像等等场合，您只能选择非基于
